@@ -1,0 +1,103 @@
+/*
+    style.css
+    Description: style.css contains the css required by the only web page - index.html.
+    Author: Alfarhan Zahedi
+    Date: 4th October, 2019
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    text-align: center;
+}
+
+p {
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+a:link {
+    color: #0CC471;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0CC471;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2a7ae2;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #2a7ae2;
+}
+
+div p:first-child {
+    font-size: 72px;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 0px;
+}
+
+td {
+    padding: 3px 0px;
+}
+
+tr a {
+    padding-left: 7px;
+}
+
+hr {
+    width: 50%;
+    margin: 50px auto 50px;
+}
+
+/*
+    CSS for customising the scrollbar.
+    (https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar)
+*/
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/*
+    Some small modifications for small-screen devices.
+*/
+
+@media only screen and (max-width: 786px) {
+    body {
+        font-size: 18px;
+    }
+
+    div p:first-child {
+        font-size: 36px;
+    }
+}

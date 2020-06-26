@@ -1,103 +1,138 @@
 /*
-    style.css
-    Description: style.css contains the css required by the only web page - index.html.
-    Author: Alfarhan Zahedi
-    Date: 4th October, 2019
+	style.css
+	This stylesheet contains styles and CSS classes required by the only web page - index.html.
 */
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300');
+/*
+	CSS for importing external stylesheets.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Source+Sans+Pro&display=swap");
 
-html {
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
-    font-family: 'Lato', sans-serif;
-}
-
-body {
-    padding: 100px 20px;
-    display: flex;
-    justify-content: center;
-    font-size: 26px;
-    text-align: center;
+* {
+	box-sizing: border-box;
 }
 
 p {
-    padding: 10px 0px;
-    margin: 0px;
+	line-height: 1.47em;
+	margin: 1em 0px;
 }
 
-a:link {
-    color: #0CC471;
-    text-decoration: none;
-}
-
+a:link,
 a:visited {
-    color: #0CC471;
-    text-decoration: none;
+	color: #0994c3;
+	border-bottom: 1px solid transparent;
+	text-decoration: none;
+	-webkit-transition: border 0.5s ease-out;
+	-moz-transition: border 0.5s ease-out;
+	-o-transition: border 0.5s ease-out;
+	transition: border 0.5s ease-out;
 }
 
 a:hover {
-    color: #2a7ae2;
-    text-decoration: underline;
+	color: #000000;
+	border-color: #000000;
+	-webkit-transition: border 0s ease-out;
+	-moz-transition: border 0s ease-out;
+	-o-transition: border 0s ease-out;
+	transition: border 0s ease-out;
 }
 
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
 a:active {
-    color: #2a7ae2;
+	outline: none;
 }
 
-div p:first-child {
-    font-size: 72px;
+.container {
+	padding: 1em;
 }
 
-table {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0px 0px;
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
-td {
-    padding: 3px 0px;
+[class*="column-"] {
+	width: 100%;
 }
 
-tr a {
-    padding-left: 7px;
+.sidebar .element {
+	margin: 0px 0px 50px 0px;
 }
 
-hr {
-    width: 50%;
-    margin: 50px auto 50px;
+.font-weight__bold {
+	font-weight: bold;
+}
+
+hr.divider {
+	border: 0.5px solid #cccccc;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 /*
-    CSS for customising the scrollbar.
-    (https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar)
+	CSS for large devices (desktops, 992px and up)
+*/
+
+@media only screen and (min-width: 992px) {
+	.container {
+		padding: 1em 3em;
+	}
+
+	[class*="column-"] {
+		float: left;
+	}
+
+	.column-5 {
+		width: 41.66%;
+	}
+
+	.column-7 {
+		width: 58.33%;
+	}
+
+	.mr-lg-6 {
+		margin-right: 6rem;
+	}
+
+	hr.divider {
+		display: none;
+	}
+}
+
+/*
+	CSS for custom fonts.
+*/
+
+.font-family__homemade-apple {
+	font-family: "Homemade Apple", cursive;
+}
+
+.font-family__source-sans-pro {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+/*
+	CSS for customising the scrollbar.
+	(https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar)
 */
 
 ::-webkit-scrollbar {
-    width: 4px;
+	width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 0px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
-
-/*
-    Some small modifications for small-screen devices.
-*/
-
-@media only screen and (max-width: 786px) {
-    body {
-        font-size: 18px;
-    }
-
-    div p:first-child {
-        font-size: 36px;
-    }
+	border-radius: 0px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }

@@ -74,6 +74,15 @@ hr.divider {
 	margin-bottom: 2rem;
 }
 
+.logo__inline_amazon {
+	display: inline-block;
+	width: 70px;
+	height: auto;
+	position: relative;
+	top: 12px;
+	margin: 2px;
+}
+
 /*
 	CSS for large devices (desktops, 992px and up)
 */

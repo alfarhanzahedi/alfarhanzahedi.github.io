@@ -83,6 +83,14 @@ hr.divider {
 	margin: 2px;
 }
 
+.desktop-only {
+	display: none;
+}
+
+.mobile-only {
+	display: block;
+}
+
 /*
 	CSS for large devices (desktops, 992px and up)
 */
@@ -109,6 +117,14 @@ hr.divider {
 	}
 
 	hr.divider {
+		display: none;
+	}
+
+	.desktop-only {
+		display: block;
+	}
+
+	.mobile-only {
 		display: none;
 	}
 }
